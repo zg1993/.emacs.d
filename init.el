@@ -12,7 +12,6 @@
 (setq inferior-lisp-program "/usr/bin/sbcl")
 (setq slime-contribs '(slime-fancy))
 
-
 (require 'init-packages)
 ;;界面相关的配置
 (require 'init-ui)
