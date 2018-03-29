@@ -1,12 +1,12 @@
 
 (when (>= emacs-major-version 24)
-  (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
+  (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)  
   )
 
 (require 'cl)
 
 (defvar my/packages '(
-		      company
+		      ;;company
 		      hungry-delete
 		      swiper
 		      counsel
@@ -14,6 +14,9 @@
 		      material-theme
 		      evil
 		      elpy ;;python 相关插件
+		      company-ycmd ;;自动补全
+		      jedi ;; a Python auto-completion for Emacs
+		      
 		      monokai-theme)"Default packages")
 (setq package-selected-packages my/packages)
 
@@ -29,6 +32,9 @@
     (when (not (package-installed-p pkg))
       (package-install pkg))))
 
+;;(require 'ycmd)
+;;(add-hook 'after-init-hook #'global-ycmd-mode)
+
 (global-hungry-delete-mode)
 
 (smartparens-global-mode t)
@@ -38,6 +44,6 @@
 (elpy-enable)
 
 ;;(evil-mode 1)
-;;(load-theme 'monokai t)
+(load-theme 'monokai t)
 ;;(load-theme 'material t)
 (provide 'init-packages)
