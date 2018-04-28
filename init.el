@@ -19,4 +19,8 @@
 (require 'init-better-defaults)
 ;;快捷键相关的配置
 (require 'init-keybindings)
+
+
+(require 'tab_mode)
+
 (require 'org)

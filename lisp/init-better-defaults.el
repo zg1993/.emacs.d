@@ -11,4 +11,6 @@
 
 ;;(setq indent-tabs-mode nil)
 
+(setq default-directory "/home/zhou/c/")
+
 (provide 'init-better-defaults)
