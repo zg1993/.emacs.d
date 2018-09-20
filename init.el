@@ -1,4 +1,4 @@
-;init.el
+;;;init.el
 (package-initialize)
 ;;将lisp目录添加到搜索路径
 (add-to-list 'load-path "~/.emacs.d/lisp/")
