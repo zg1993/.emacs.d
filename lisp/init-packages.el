@@ -1,6 +1,7 @@
 
 (when (>= emacs-major-version 24)
-  (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)  
+ ; (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+  (add-to-list 'package-archives '("melpa" . "http://melpa.emacs-china.org/melpa/") t)  
   )
 
 (require 'cl)
@@ -17,7 +18,10 @@
 		      company-ycmd ;;自动补全
 		      jedi ;; a Python auto-completion for Emacs
 		      
-		      monokai-theme)"Default packages")
+		      monokai-theme
+		      go-mode
+		      highlight-parentheses
+		      )"Default packages")
 (setq package-selected-packages my/packages)
 
 (defun my/packages-installed-p()
@@ -43,7 +47,8 @@
 
 (elpy-enable)
 
+(global-highlight-parentheses-mode t)
 ;;(evil-mode 1)
-(load-theme 'monokai t)
+;;(load-theme 'monokai t)
 ;;(load-theme 'material t)
 (provide 'init-packages)

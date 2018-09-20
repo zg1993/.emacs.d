@@ -15,6 +15,7 @@
 ;;Move to the next line and the open a line.
 (global-set-key (kbd "C-o") 'vi-open-next-line)
 ;;(local-set-key [(control o)] 'vi-open-next-line)
+(global-set-key (kbd "C-i") 'set-mark-command)
 (defun vi-open-next-line (arg)
   (interactive "p")
   (end-of-line)
@@ -34,4 +35,7 @@
   (global-set-key (kbd "C-c l") 'windmove-right)
   (global-set-key (kbd "C-c i") 'windmove-up)
   (global-set-key (kbd "C-c k") 'windmove-down))
+;; copy set mark
+;;(define-key global-map [] 'set-mark-command)
+
 (provide 'init-keybindings)
