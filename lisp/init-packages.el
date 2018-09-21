@@ -1,7 +1,8 @@
 
+
 (when (>= emacs-major-version 24)
- ; (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
-  (add-to-list 'package-archives '("melpa" . "http://melpa.emacs-china.org/melpa/") t)  
+;  (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+  (add-to-list 'package-archives '("melpa" . "http://elpa.emacs-china.org/melpa/") t)  
   )
 
 (require 'cl)
@@ -17,7 +18,9 @@
 		      elpy ;;python 相关插件
 		      company-ycmd ;;自动补全
 		      jedi ;; a Python auto-completion for Emacs
-		      
+		      py-autopep8
+  		      flycheck
+		      better-defaults
 		      monokai-theme
 		      go-mode
 		      highlight-parentheses
@@ -45,10 +48,13 @@
 
 (global-company-mode t)
 
+;; python
 (elpy-enable)
+(add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
+
 
 (global-highlight-parentheses-mode t)
 ;;(evil-mode 1)
 ;;(load-theme 'monokai t)
-;;(load-theme 'material t)
+;(load-theme 'material t)
 (provide 'init-packages)
