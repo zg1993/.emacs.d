@@ -49,8 +49,8 @@
 (global-company-mode t)
 
 ;; python
-(elpy-enable)
-(add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
+;;(elpy-enable)
+;;(add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
 
 
 (global-highlight-parentheses-mode t)

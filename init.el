@@ -20,7 +20,7 @@
 ;;快捷键相关的配置
 (require 'init-keybindings)
 
-
-(require 'tab_mode)
-
+;(elpy-use-ipython)
+;(require 'tab_mode)
+(require 'custom)
 (require 'org)
