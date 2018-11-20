@@ -1,6 +1,7 @@
 
 (when (>= emacs-major-version 24)
-  (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
+  ;;(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
+  (add-to-list 'package-archives '("melpa" . "http://elpa.emacs-china.org/melpa/") t)
   )
 
 (require 'cl)
@@ -11,6 +12,7 @@
 		      swiper
 		      counsel
 		      smartparens
+		      highlight-parentheses
 		      monokai-theme)"Default packages")
 (setq package-selected-packages my/packages)
 
@@ -29,6 +31,8 @@
 (global-hungry-delete-mode)
 
 (smartparens-global-mode t)
+
+(global-highlight-parentheses-mode t)
 
 (global-company-mode t)
 
